@@ -1,0 +1,30 @@
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.lux-form:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+.lux-input:hover {
+  border-color: #f87171;
+  /* đỏ nhạt */
+}
+
+.lux-input:focus {
+  border-color: #ef4444;
+  /* đỏ chính */
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2);
+}
+
+.lux-button {
+  transition: all 0.3s ease;
+}
+
+.lux-button:hover {
+  background-color: #b91c1c;
+  transform: translateY(-1px) scale(1.02);
+  box-shadow: 0 8px 18px rgba(185, 28, 28, 0.4);
+}
