@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Danh sách bài viết</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+
+<body class="bg-white text-gray-800">
+  <div class="min-h-screen flex">
+    <!-- Sidebar -->
+    <aside class="w-60 bg-white border-r border-gray-200">
+     <div class="px-6 py-4 text-xl font-bold border-b border-gray-200">Bảng điều khiển</div>
+      <nav class="flex flex-col text-sm divide-y divide-gray-200">
+        <a href="/Dashboard.html" class="flex items-center gap-2 px-6 py-3 hover:bg-gray-100">
+          <span class="material-icons text-base">dashboard</span> Bảng điều khiển
+        </a>
+        <a href="#" class="flex items-center gap-2 px-6 py-3 font-semibold bg-gray-900 text-white">
+          <span class="material-icons text-base">article</span> Bài viết
+        </a>
+        <a href="/User Management.html" class="flex items-center gap-2 px-6 py-3 hover:bg-gray-100">
+          <span class="material-icons text-base">people</span> Người dùng
+        </a>
+        
+      </nav>
+    </aside>
+
+    <!-- Nội dung chính -->
+    <main class="flex-1 p-10">
+<!-- Hàng trên: Tiêu đề bên trái và nút quay về bên phải -->
+<div class="flex items-center justify-between mb-4">
+  <h2 class="text-2xl font-bold">Tất cả bài viết</h2>
+  <a href="index.html" class="text-sm text-gray-600 border border-gray-300 px-4 py-2 rounded hover:bg-gray-100 transition">
+    Quay về trang chủ
+  </a>
+</div>
+
+<!-- Hàng dưới: Nút thêm bài viết -->
+<div class="mb-6">
+  <button class="bg-black text-white px-4 py-2 rounded text-sm font-semibold hover:opacity-90">
+    + Thêm bài viết mới
+  </button>
+</div>
+
+      <!-- Thanh tìm kiếm và bộ lọc -->
+      <div class="flex items-center justify-between mb-4">
+        <input type="text" placeholder="Tìm kiếm bài viết..." class="border border-gray-300 rounded px-4 py-2 text-sm w-full max-w-sm">
+        <select class="ml-4 border border-gray-300 rounded px-3 py-2 text-sm">
+          <option>Tất cả thể loại</option>
+          <option>Công nghệ</option>
+          <option>Kinh tế</option>
+          <option>Môi trường</option>
+          <option>Thể thao</option>
+          <option>Văn hoá</option>
+        </select>
+      </div>
+
+      <!-- Bảng danh sách bài viết -->
+      <div class="bg-white border border-gray-200 rounded">
+        <table class="w-full text-sm">
+          <thead class="text-left bg-white">
+            <tr class="text-gray-600 border-b border-gray-200">
+              <th class="py-2 px-4">Tiêu đề</th>
+              <th class="py-2 px-4">Loại</th>
+              <th class="py-2 px-4">Ngày</th>
+              <th class="py-2 px-4 text-right">Hành động</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-gray-100">
+              <td class="py-3 px-4 text-gray-800">Bài viết ví dụ về công nghệ AI</td>
+              <td class="py-3 px-4"><span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Công nghệ</span></td>
+              <td class="py-3 px-4 text-gray-600">Ngày 22 tháng 5 năm 2025</td>
+              <td class="py-3 px-4 text-right space-x-2">
+                <button class="px-3 py-1 border border-gray-300 rounded text-sm text-gray-700 hover:bg-gray-100 transition">Sửa</button>
+                <button class="px-3 py-1 border border-red-300 text-red-600 rounded text-sm hover:bg-red-50 transition">Xoá</button>
+              </td>
+            </tr>
+            <!-- Thêm nhiều dòng nếu cần -->
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+</body>
+
+</html>
