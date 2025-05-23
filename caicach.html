@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chi tiết bài viết | Báo Bảo Hòa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9fafb;
+        }
+
+        /* Hover effects */
+        img:hover,
+        a:hover {
+            transform: scale(1.05);
+        }
+
+        img,
+        a {
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+
+<body class="text-gray-800 relative">
+    <!-- Social Sidebar -->
+    <div class="hidden lg:flex flex-col items-center fixed left-0 top-1/3 space-y-4 pl-2">
+        <a href="#" class="bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition"
+            aria-label="Facebook">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                    d="M22 12a10 10 0 1 0-11.5 9.9v-7h-3v-3h3v-2.3c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2v3h-1.5c-1.5 0-2 1-2 2v2h3.4l-.5 3h-2.9v7A10 10 0 0 0 22 12">
+                </path>
+            </svg>
+        </a>
+        <a href="#" class="bg-blue-400 text-white p-3 rounded-full shadow-lg hover:bg-blue-500 transition"
+            aria-label="Twitter">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                    d="M23 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0012 7v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                </path>
+            </svg>
+        </a>
+        <a href="#" class="bg-blue-800 text-white p-3 rounded-full shadow-lg hover:bg-blue-900 transition"
+            aria-label="LinkedIn">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6z" />
+                <rect width="4" height="12" x="2" y="9" />
+                <circle cx="4" cy="4" r="2" />
+            </svg>
+        </a>
+    </div>
+
+    <!-- Related Sidebar -->
+    <div class="hidden lg:block fixed right-0 top-1/4 bg-white shadow-lg rounded-l-xl p-6 w-64">
+        <h4 class="text-lg font-semibold text-gray-800 mb-6">Có thể bạn quan tâm</h4>
+        <ul class="space-y-6">
+            <li>
+                <a href="/laisuatnganhang.html"
+                    class="flex items-start space-x-4 hover:bg-gray-50 p-2 rounded-lg transition">
+                    <img src="https://images.unsplash.com/photo-1596495577886-d920f1fb7238?auto=format&fit=crop&w=120&h=120&q=80"
+                        alt="Lãi suất ngân hàng" class="w-20 h-20 object-cover rounded-lg" />
+                    <div>
+                        <h5 class="text-base font-semibold text-gray-900 hover:text-red-600 transition">Lãi suất ngân
+                            hàng có thể
+                            thay đổi trong quý tới?</h5>
+                        <p class="text-xs text-gray-500 mt-1">14 Tháng 5, 2025</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="/quochoi.html" class="flex items-start space-x-4 hover:bg-gray-50 p-2 rounded-lg transition">
+                    <img src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad?auto=format&fit=crop&w=120&h=120&q=80"
+                        alt="Ngân sách 2026" class="w-20 h-20 object-cover rounded-lg" />
+                    <div>
+                        <h5 class="text-base font-semibold text-gray-900 hover:text-red-600 transition">Quốc hội thông
+                            qua ngân sách
+                            mới cho năm 2026</h5>
+                        <p class="text-xs text-gray-500 mt-1">10 Tháng 5, 2025</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="/cohoi.html" class="flex items-start space-x-4 hover:bg-gray-50 p-2 rounded-lg transition">
+                    <img src="https://cdn2.tuoitre.vn/471584752817336320/2025/2/14/anh-4-1739499803498457831848.jpg"
+                        alt="Đầu tư hạ tầng" class="w-20 h-20 object-cover rounded-lg" />
+                    <div>
+                        <h5 class="text-base font-semibold text-gray-900 hover:text-red-600 transition">Cơ hội đầu tư
+                            vào hạ tầng
+                            giao thông nửa cuối 2025</h5>
+                        <p class="text-xs text-gray-500 mt-1">8 Tháng 5, 2025</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Header -->
+    <header class="sticky top-0 bg-white shadow-lg z-50">
+        <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+            <h1 class="text-2xl font-bold text-red-600">Báo Bảo Hòa</h1>
+            <nav class="flex space-x-4">
+                <a href="index.html"
+                    class="px-4 py-2 text-gray-700 font-semibold rounded-md hover:bg-red-50 hover:text-red-600 transition">Trang
+                    chủ</a>
+                <a href="#"
+                    class="px-4 py-2 text-gray-700 font-semibold rounded-md hover:bg-red-50 hover:text-red-600 transition">Kinh
+                    tế</a>
+                <a href="#"
+                    class="px-4 py-2 text-gray-700 font-semibold rounded-md hover:bg-red-50 hover:text-red-600 transition">Tài
+                    chính</a>
+                <a href="#"
+                    class="px-4 py-2 text-gray-700 font-semibold rounded-md hover:bg-red-50 hover:text-red-600 transition">Chính
+                    sách</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="bg-white shadow-inner">
+        <div class="max-w-7xl mx-auto px-6 py-3 text-sm text-gray-500">
+            <a href="index.html" class="hover:underline">Trang chủ</a> /
+            <a href="#" class="hover:underline">Kinh tế</a> /
+            <span>Chi tiết bài viết</span>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <main class="max-w-7xl mx-auto px-6 py-12 bg-white rounded-xl shadow-lg mt-6 flex flex-col lg:flex-row gap-10">
+        <!-- Left: Featured Image -->
+        <div class="lg:w-1/3 rounded-xl overflow-hidden">
+            <img src="./assets/images/Cải cách giáo dục được thông qua bất chấp biểu tình.jpg"
+                alt="Ảnh minh họa kinh tế" class="w-full h-full object-cover" loading="lazy" />
+        </div>
+
+        <!-- Right: Article -->
+        <article class="lg:w-2/3">
+            <!-- Title and Meta -->
+            <h2 class="text-4xl font-extrabold text-gray-900 mb-4">Cải cách giáo dục được thông qua bất chấp biểu tình
+            </h2>
+            <div class="text-sm text-gray-500 mb-6 flex items-center space-x-4">
+                <span>9 Tháng 5 2025</span>
+                <span>•</span>
+                <span>4 phút đọc</span>
+            </div>
+
+            <div class="prose prose-lg prose-red text-gray-700">
+                <p>Một bước ngoặt lớn trong lĩnh vực giáo dục vừa được ghi nhận trong quý II năm 2025 khi Quốc hội chính
+                    thức thông
+                    qua gói cải cách giáo dục toàn diện, bất chấp làn sóng biểu tình và tranh cãi gay gắt từ nhiều phía.
+                    Đây được
+                    xem là nỗ lực nhằm hiện đại hóa hệ thống giáo dục, nâng cao chất lượng đào tạo và đáp ứng nhu cầu
+                    thực tiễn của
+                    thị trường lao động.</p>
+
+                <h3>Nội dung cải cách gây tranh cãi</h3>
+                <p>Gói cải cách bao gồm việc thay đổi chương trình học từ bậc tiểu học đến đại học, tăng cường giảng dạy
+                    kỹ năng
+                    mềm, tư duy phản biện và công nghệ số. Bên cạnh đó là việc tái cấu trúc kỳ thi quốc gia, giảm thiểu
+                    học lệch và
+                    áp lực điểm số. Tuy nhiên, nhiều giáo viên và phụ huynh lo ngại về tốc độ thay đổi quá nhanh và
+                    thiếu lộ trình
+                    triển khai rõ ràng.</p>
+
+                <h3>Biểu tình và lo ngại từ cộng đồng</h3>
+                <p>Ngay sau khi dự luật được công bố, hàng nghìn người đã đổ xuống đường tại các thành phố lớn như Hà
+                    Nội và TP.HCM
+                    để phản đối. Họ cho rằng cải cách chưa tính đến điều kiện thực tế ở nhiều địa phương, đặc biệt là
+                    vùng sâu vùng
+                    xa. Một số tổ chức giáo dục độc lập cũng lên tiếng yêu cầu xem xét lại các điều khoản liên quan đến
+                    kiểm định
+                    chất lượng và quyền tự chủ của nhà trường.</p>
+
+                <blockquote>“Chúng tôi ủng hộ cải cách, nhưng cần sự đối thoại và điều chỉnh dựa trên phản hồi thực tế
+                    từ những
+                    người trực tiếp giảng dạy và học tập.” — Ý kiến từ một giáo viên trung học tại buổi tọa đàm chuyên
+                    đề.
+                </blockquote>
+
+                <h3>Chính phủ cam kết lắng nghe và điều chỉnh</h3>
+                <p>Trước làn sóng phản ứng, Bộ Giáo dục và Đào tạo cho biết sẽ thành lập hội đồng đánh giá độc lập, đồng
+                    thời mở
+                    rộng kênh góp ý từ cộng đồng giáo dục. Các chương trình thí điểm cũng sẽ được triển khai tại nhiều
+                    địa phương
+                    trước khi áp dụng đại trà.</p>
+
+                <p>Thông tin chi tiết về nội dung cải cách, lịch trình thực hiện và các kênh góp ý công khai có thể được
+                    theo dõi
+                    tại
+                    <a href="#" class="text-red-600 hover:text-red-600">cổng thông tin cải cách giáo dục tại đây</a>.
+                </p>
+            </div>
+            <!-- Back Button -->
+            <div class="mt-8">
+                <a href="index.html"
+                    class="inline-block px-6 py-3 bg-red-600 text-white font-semibold rounded-full hover:bg-red-700 transition shadow-md">
+                    ← Quay lại Trang chủ
+                </a>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 py-12 mt-10">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-8">
+            <!-- Cột 1 -->
+            <div>
+                <h3 class="text-xl font-semibold mb-4">BaoBaoHoa</h3>
+                <p class="text-sm text-gray-600 mb-4">
+                    Nguồn tin đáng tin cậy để theo dõi thời sự trong nước và quốc tế.
+                </p>
+                <div class="flex space-x-4 text-sm text-gray-500">
+                    <a href="#">Facebook</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">Instagram</a>
+                </div>
+            </div>
+
+            <!-- Cột 2 -->
+            <div>
+                <h4 class="font-semibold text-lg mb-3">Danh mục</h4>
+                <ul class="text-sm text-gray-600 space-y-2">
+                    <li><a href="#">Chính trị</a></li>
+                    <li><a href="#">Kinh tế</a></li>
+                    <li><a href="#">Công nghệ</a></li>
+                    <li><a href="#">Thể thao</a></li>
+                    <li><a href="#">Văn hóa</a></li>
+                </ul>
+            </div>
+
+            <!-- Cột 3 -->
+            <div>
+                <h4 class="font-semibold text-lg mb-3">Liên kết</h4>
+                <ul class="text-sm text-gray-600 space-y-2">
+                    <li><a href="#">Giới thiệu</a></li>
+                    <li><a href="#">Liên hệ</a></li>
+                    <li><a href="#">Chính sách bảo mật</a></li>
+                    <li><a href="#">Điều khoản sử dụng</a></li>
+                </ul>
+            </div>
+
+            <!-- Cột 4 -->
+            <div>
+                <h4 class="font-semibold text-lg mb-3">Đăng ký nhận tin</h4>
+                <p class="text-sm text-gray-600 mb-4">
+                    Nhập email để nhận tin tức mới nhất từ chúng tôi.
+                </p>
+                <form class="flex">
+                    <input type="email" placeholder="Email của bạn"
+                        class="flex-1 px-4 py-2 rounded-l-md border border-gray-300 focus:outline-none" />
+                    <button class="bg-red-700 text-white px-4 rounded-r-md">Gửi</button>
+                </form>
+            </div>
+        </div>
+        <div class="text-center text-sm text-gray-500 mt-10 border-t pt-4">
+            © 2025 Cổng Tin Tức. Bản quyền thuộc về nhóm phát triển.
+        </div>
+    </footer>
+</body>
+
+</html>
