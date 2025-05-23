@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chi tiết bài viết | Báo Bảo Hòa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9fafb;
+        }
+
+        /* Hover effects */
+        img:hover,
+        a:hover {
+            transform: scale(1.05);
+        }
+
+        img,
+        a {
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+
+<body class="text-gray-800 relative">
+    <!-- Social Sidebar -->
+    <div class="hidden lg:flex flex-col items-center fixed left-0 top-1/3 space-y-4 pl-2">
+        <a href="#" class="bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition"
+            aria-label="Facebook">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                    d="M22 12a10 10 0 1 0-11.5 9.9v-7h-3v-3h3v-2.3c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2v3h-1.5c-1.5 0-2 1-2 2v2h3.4l-.5 3h-2.9v7A10 10 0 0 0 22 12">
+                </path>
+            </svg>
+        </a>
+        <a href="#" class="bg-blue-400 text-white p-3 rounded-full shadow-lg hover:bg-blue-500 transition"
+            aria-label="Twitter">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                    d="M23 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0012 7v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                </path>
+            </svg>
+        </a>
+        <a href="#" class="bg-blue-800 text-white p-3 rounded-full shadow-lg hover:bg-blue-900 transition"
+            aria-label="LinkedIn">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6z" />
+                <rect width="4" height="12" x="2" y="9" />
+                <circle cx="4" cy="4" r="2" />
+            </svg>
+        </a>
+    </div>
+
+    <!-- Related Sidebar -->
+    <div class="hidden lg:block fixed right-0 top-1/4 bg-white shadow-lg rounded-l-xl p-6 w-64">
+        <h4 class="text-lg font-semibold text-gray-800 mb-6">Có thể bạn quan tâm</h4>
+        <ul class="space-y-6">
+            <li>
+                <a href="/mu.html" class="flex items-start space-x-4 hover:bg-gray-50 p-2 rounded-lg transition">
+                    <img src="./assets/images/Trận chung kết cúp C2 sẽ diễn ra vào 2 giờ sáng ngày này.jpg" alt="Lãi suất ngân hàng"
+                        class="w-20 h-20 object-cover rounded-lg" />
+                    <div>
+                        <h5 class="text-base font-semibold text-gray-900 hover:text-red-600 transition">Trận chung kết cúp C2</h5>
+                        <p class="text-xs text-gray-500 mt-1">14 Tháng 5, 2025</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="/tritue.html" class="flex items-start space-x-4 hover:bg-gray-50 p-2 rounded-lg transition">
+                    <img src="./assets/images/Trí tuệ nhân tạo đang cách mạng hóa thế giới công việc.jpg"
+                        alt="Ngân sách 2026" class="w-20 h-20 object-cover rounded-lg" />
+                    <div>
+                        <h5 class="text-base font-semibold text-gray-900 hover:text-red-600 transition">Trí tuệ nhân tạo
+                            đang cách mạng hóa thế giới công việc</h5>
+                        <p class="text-xs text-gray-500 mt-1">15 Tháng 5, 2025</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="/chinhphucongbo.html" class="flex items-start space-x-4 hover:bg-gray-50 p-2 rounded-lg transition">
+                    <img src="./assets/images/Ảnh minh họa.jpg"
+                        alt="Đầu tư hạ tầng" class="w-20 h-20 object-cover rounded-lg" />
+                    <div>
+                        <h5 class="text-base font-semibold text-gray-900 hover:text-red-600 transition">Chính phủ công bố các biện pháp kinh tế mới</h5>
+                        <p class="text-xs text-gray-500 mt-1">13 Tháng 5, 2025</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Header -->
+    <header class="sticky top-0 bg-white shadow-lg z-50">
+        <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+            <h1 class="text-2xl font-bold text-red-600">Báo Bảo Hòa</h1>
+            <nav class="flex space-x-4">
+                <a href="index.html"
+                    class="px-4 py-2 text-gray-700 font-semibold rounded-md hover:bg-red-50 hover:text-red-600 transition">Trang
+                    chủ</a>
+                <a href="#"
+                    class="px-4 py-2 text-gray-700 font-semibold rounded-md hover:bg-red-50 hover:text-red-600 transition">Kinh
+                    tế</a>
+                <a href="#"
+                    class="px-4 py-2 text-gray-700 font-semibold rounded-md hover:bg-red-50 hover:text-red-600 transition">Tài
+                    chính</a>
+                <a href="#"
+                    class="px-4 py-2 text-gray-700 font-semibold rounded-md hover:bg-red-50 hover:text-red-600 transition">Chính
+                    sách</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="bg-white shadow-inner">
+        <div class="max-w-7xl mx-auto px-6 py-3 text-sm text-gray-500">
+            <a href="index.html" class="hover:underline">Trang chủ</a> /
+            <a href="#" class="hover:underline">Kinh tế</a> /
+            <span>Chi tiết bài viết</span>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <main class="max-w-7xl mx-auto px-6 py-12 bg-white rounded-xl shadow-lg mt-6 flex flex-col lg:flex-row gap-10">
+        <!-- Left: Featured Image -->
+        <div class="lg:w-1/3 rounded-xl overflow-hidden">
+            <img src="./assets/images/Liên hoan phim danh sách những người chiến thắng của kỳ này.jpg"
+                alt="Ảnh minh họa kinh tế" class="w-full h-full object-cover" loading="lazy" />
+        </div>
+
+        <!-- Right: Article -->
+        <article class="lg:w-2/3">
+            <!-- Title and Meta -->
+            <h2 class="text-4xl font-extrabold text-gray-900 mb-4">Liên hoan phim: danh sách những người chiến thắng của
+                kỳ này</h2>
+            <div class="text-sm text-gray-500 mb-6 flex items-center space-x-4">
+                <span>13 Tháng 5 2025</span>
+                <span>•</span>
+                <span>8 phút đọc</span>
+            </div>
+
+            <div class="prose prose-lg prose-red text-gray-700">
+                <p>Liên hoan phim quốc tế mùa giải 2025 đã khép lại với lễ trao giải long trọng, vinh danh những tác
+                    phẩm điện ảnh
+                    và cá nhân xuất sắc nhất trong năm. Sự kiện năm nay quy tụ hơn 120 bộ phim đến từ 40 quốc gia, phản
+                    ánh sự đa
+                    dạng văn hóa và sáng tạo không ngừng của ngành công nghiệp điện ảnh toàn cầu.</p>
+
+                <h3>Phim xuất sắc nhất và đạo diễn tài năng</h3>
+                <p>Giải Phim xuất sắc nhất đã được trao cho bộ phim "Dưới Ánh Mặt Trời Xa" (Beneath the Distant Sun) đến
+                    từ Hàn
+                    Quốc, một tác phẩm xúc động khai thác mối quan hệ gia đình giữa chiến tranh và ký ức. Đạo diễn trẻ
+                    Lee Ji-won
+                    cũng đồng thời nhận giải Đạo diễn xuất sắc nhất, gây ấn tượng với cách kể chuyện sâu sắc và hình ảnh
+                    đầy chất
+                    thơ.</p>
+
+                <h3>Nam và nữ diễn viên chính xuất sắc</h3>
+                <p>Giải Nam diễn viên chính xuất sắc thuộc về Javier Moreno với vai diễn đầy nội tâm trong bộ phim Tây
+                    Ban Nha "El
+                    Silencio del Mar". Trong khi đó, nữ diễn viên Nhật Bản Ayaka Nishimura giành giải Nữ diễn viên chính
+                    xuất sắc
+                    cho màn trình diễn đầy cảm xúc trong "Ký Ức Mùa Mưa".</p>
+
+                <p>Nhiều khán giả tại Việt Nam đặc biệt quan tâm đến bộ phim tài liệu "Gió Nổi Lên Trên Đồng", đại diện
+                    của Việt Nam
+                    tại liên hoan, đã giành giải Phim tài liệu xuất sắc nhất – một tín hiệu tích cực cho nền điện ảnh
+                    độc lập trong
+                    nước.</p>
+
+                <blockquote>“Liên hoan phim không chỉ là nơi tôn vinh nghệ thuật điện ảnh, mà còn là tiếng nói của những
+                    câu chuyện
+                    chưa được kể.” — Chủ tịch hội đồng giám khảo chia sẻ trong buổi bế mạc.</blockquote>
+
+                <h3>Những xu hướng điện ảnh nổi bật</h3>
+                <p>Sự kiện năm nay chứng kiến làn sóng phim mang thông điệp xã hội mạnh mẽ, đặc biệt là các chủ đề liên
+                    quan đến
+                    biến đổi khí hậu, di cư và bình đẳng giới. Nhiều tác phẩm sử dụng công nghệ mới như AI và kỹ xảo
+                    thực tế ảo để
+                    kể chuyện một cách đột phá, mở ra những hướng đi mới cho tương lai ngành phim ảnh.</p>
+
+                <p>Người yêu điện ảnh có thể xem danh sách đầy đủ những người chiến thắng, bài phát biểu, cũng như
+                    trailer các bộ
+                    phim đoạt giải tại <a href="#" class="text-red-600 hover:text-red-600">trang thông tin chính thức
+                        của liên hoan
+                        phim tại đây</a>.</p>
+            </div>
+
+            <!-- Back Button -->
+            <div class="mt-8">
+                <a href="index.html"
+                    class="inline-block px-6 py-3 bg-red-600 text-white font-semibold rounded-full hover:bg-red-700 transition shadow-md">
+                    ← Quay lại Trang chủ
+                </a>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 py-12 mt-10">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-8">
+            <!-- Cột 1 -->
+            <div>
+                <h3 class="text-xl font-semibold mb-4">BaoBaoHoa</h3>
+                <p class="text-sm text-gray-600 mb-4">
+                    Nguồn tin đáng tin cậy để theo dõi thời sự trong nước và quốc tế.
+                </p>
+                <div class="flex space-x-4 text-sm text-gray-500">
+                    <a href="#">Facebook</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">Instagram</a>
+                </div>
+            </div>
+
+            <!-- Cột 2 -->
+            <div>
+                <h4 class="font-semibold text-lg mb-3">Danh mục</h4>
+                <ul class="text-sm text-gray-600 space-y-2">
+                    <li><a href="#">Chính trị</a></li>
+                    <li><a href="#">Kinh tế</a></li>
+                    <li><a href="#">Công nghệ</a></li>
+                    <li><a href="#">Thể thao</a></li>
+                    <li><a href="#">Văn hóa</a></li>
+                </ul>
+            </div>
+
+            <!-- Cột 3 -->
+            <div>
+                <h4 class="font-semibold text-lg mb-3">Liên kết</h4>
+                <ul class="text-sm text-gray-600 space-y-2">
+                    <li><a href="#">Giới thiệu</a></li>
+                    <li><a href="#">Liên hệ</a></li>
+                    <li><a href="#">Chính sách bảo mật</a></li>
+                    <li><a href="#">Điều khoản sử dụng</a></li>
+                </ul>
+            </div>
+
+            <!-- Cột 4 -->
+            <div>
+                <h4 class="font-semibold text-lg mb-3">Đăng ký nhận tin</h4>
+                <p class="text-sm text-gray-600 mb-4">
+                    Nhập email để nhận tin tức mới nhất từ chúng tôi.
+                </p>
+                <form class="flex">
+                    <input type="email" placeholder="Email của bạn"
+                        class="flex-1 px-4 py-2 rounded-l-md border border-gray-300 focus:outline-none" />
+                    <button class="bg-red-700 text-white px-4 rounded-r-md">Gửi</button>
+                </form>
+            </div>
+        </div>
+        <div class="text-center text-sm text-gray-500 mt-10 border-t pt-4">
+            © 2025 Cổng Tin Tức. Bản quyền thuộc về nhóm phát triển.
+        </div>
+    </footer>
+</body>
+
+</html>
