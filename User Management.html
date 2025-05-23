@@ -17,9 +17,10 @@
 </head>
 
 <body class="bg-white text-gray-800">
-  <div class="min-h-screen flex">
+  <div class="min-h-screen flex flex-col md:flex-row">
+
     <!-- Sidebar -->
-    <aside class="w-60 bg-white border-r border-gray-200">
+    <aside class="w-full md:w-60 bg-white border-b md:border-b-0 md:border-r border-gray-200">
       <div class="px-6 py-4 text-xl font-bold border-b border-gray-200">Bảng điều khiển</div>
       <nav class="flex flex-col text-sm divide-y divide-gray-200">
         <a href="/Dashboard.html" class="flex items-center gap-2 px-6 py-3 hover:bg-gray-100">
@@ -34,33 +35,38 @@
         <a href="/role.html" class="flex items-center gap-2 px-6 py-3 hover:bg-gray-100">
           <span class="material-icons text-base">security</span> Quyền
         </a>
-
       </nav>
     </aside>
 
     <!-- Main content -->
-    <main class="flex-1 p-10">
-      <div class="flex items-center justify-between mb-6">
+    <main class="flex-1 p-4 md:p-10">
+      <div class="flex flex-col md:flex-row items-start md:items-center justify-between mb-6 gap-4">
         <h2 class="text-2xl font-bold">Quản lý người dùng</h2>
         <div class="flex items-center gap-3">
           <a href="/homepage.html" class="border px-4 py-2 rounded text-sm hover:bg-gray-100">Quay lại trang</a>
-          <button class="bg-black text-white px-4 py-2 rounded text-sm font-semibold hover:opacity-90">+ Thêm người
-            dùng</button>
+          <!-- Desktop button -->
+          <button
+            class="hidden md:inline-flex bg-black text-white px-4 py-2 rounded text-sm font-semibold hover:opacity-90">+
+            Thêm người dùng</button>
+          <!-- Mobile icon button -->
+          <button class="md:hidden bg-black text-white p-2 rounded-full hover:opacity-90">
+            <span class="material-icons text-base">person_add</span>
+          </button>
         </div>
       </div>
 
       <!-- Search -->
-      <div class="flex items-center justify-between mb-4">
+      <div class="flex flex-col sm:flex-row items-center justify-between mb-4 gap-2">
         <input type="text" placeholder="Tìm kiếm người dùng..."
-          class="border border-gray-300 rounded px-4 py-2 text-sm w-full max-w-sm">
-        <button class="ml-2 px-3 py-2 border rounded hover:bg-gray-100">
+          class="border border-gray-300 rounded px-4 py-2 text-sm w-full sm:max-w-sm">
+        <button class="px-3 py-2 border rounded hover:bg-gray-100">
           <span class="material-icons text-base">filter_alt</span>
         </button>
       </div>
 
       <!-- User Table -->
-      <div class="bg-white border border-gray-200 rounded">
-        <table class="w-full text-sm">
+      <div class="bg-white border border-gray-200 rounded overflow-x-auto">
+        <table class="w-full text-sm min-w-[600px]">
           <thead class="bg-white">
             <tr class="text-gray-600 border-b border-gray-200">
               <th class="py-2 px-4">Tên</th>
@@ -72,6 +78,7 @@
             </tr>
           </thead>
           <tbody class="text-gray-800">
+            <!-- Example Row -->
             <tr class="border-b border-gray-100">
               <td class="py-3 px-4 flex items-center gap-3">
                 <img src="/assets/images/acount.png" class="w-8 h-8 rounded-full" />
@@ -213,26 +220,27 @@
                   class="px-3 py-1 border border-red-200 text-red-600 rounded text-sm hover:bg-red-50">Xoá</button>
               </td>
             </tr>
-            tr class="border-b border-gray-100">
-            <td class="py-3 px-4 flex items-center gap-3">
-              <img src="/assets/images/acount.png" class="w-8 h-8 rounded-full" />
-              <span class="font-semibold">Van Đơ Sarrrr </span>
-            </td>
-            <td class="py-3 px-4">giup7dnightcong1c1@gmail.com</td>
-            <td class="py-3 px-4">
-              <span class="bg-white text-black text-xs px-2 py-1 rounded">người xem</span>
-            </td>
-            <td class="py-3 px-4">
-              <span class="bg-green-100 text-green-700 text-xs px-2 py-1 rounded">hoạt động</span>
-            </td>
-            <td class="py-3 px-4">20 Tháng 5, 2025</td>
-            <td class="py-3 px-4 space-x-2 text-right">
-              <button class="px-3 py-1 border rounded text-sm hover:bg-gray-100">Vô hiệu</button>
-              <button class="px-3 py-1 border rounded text-sm hover:bg-gray-100">Sửa</button>
-              <button class="px-3 py-1 border border-red-200 text-red-600 rounded text-sm hover:bg-red-50">Xoá</button>
-            </td>
+            <tr class="border-b border-gray-100">
+              <td class="py-3 px-4 flex items-center gap-3">
+                <img src="/assets/images/acount.png" class="w-8 h-8 rounded-full" />
+                <span class="font-semibold">Van Đơ Sarrrr </span>
+              </td>
+              <td class="py-3 px-4">giup7dnightcong1c1@gmail.com</td>
+              <td class="py-3 px-4">
+                <span class="bg-white text-black text-xs px-2 py-1 rounded">người xem</span>
+              </td>
+              <td class="py-3 px-4">
+                <span class="bg-green-100 text-green-700 text-xs px-2 py-1 rounded">hoạt động</span>
+              </td>
+              <td class="py-3 px-4">20 Tháng 5, 2025</td>
+              <td class="py-3 px-4 space-x-2 text-right">
+                <button class="px-3 py-1 border rounded text-sm hover:bg-gray-100">Vô hiệu</button>
+                <button class="px-3 py-1 border rounded text-sm hover:bg-gray-100">Sửa</button>
+                <button
+                  class="px-3 py-1 border border-red-200 text-red-600 rounded text-sm hover:bg-red-50">Xoá</button>
+              </td>
             </tr>
-
+            <!-- Add other rows similarly -->
           </tbody>
         </table>
       </div>

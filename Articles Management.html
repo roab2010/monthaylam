@@ -17,15 +17,16 @@
 </head>
 
 <body class="bg-white text-gray-800">
-  <div class="min-h-screen flex">
+  <div class="min-h-screen flex flex-col md:flex-row">
+
     <!-- Sidebar -->
-    <aside class="w-60 bg-white border-r border-gray-200">
+    <aside class="w-full md:w-60 bg-white border-b md:border-b-0 md:border-r border-gray-200">
       <div class="px-6 py-4 text-xl font-bold border-b border-gray-200">Bảng điều khiển</div>
       <nav class="flex flex-col text-sm divide-y divide-gray-200">
         <a href="/Dashboard.html" class="flex items-center gap-2 px-6 py-3 hover:bg-gray-100">
           <span class="material-icons text-base">dashboard</span> Bảng điều khiển
         </a>
-        <a href="#" class="flex items-center gap-2 px-6 py-3 font-semibold bg-gray-900 text-white">
+        <a href="#" class="flex items-center gap-2 px-6 py-3 bg-gray-900 text-white">
           <span class="material-icons text-base">article</span> Bài viết
         </a>
         <a href="/User Management.html" class="flex items-center gap-2 px-6 py-3 hover:bg-gray-100">
@@ -34,14 +35,13 @@
         <a href="/role.html" class="flex items-center gap-2 px-6 py-3 hover:bg-gray-100">
           <span class="material-icons text-base">security</span> Quyền
         </a>
-
       </nav>
     </aside>
 
     <!-- Nội dung chính -->
-    <main class="flex-1 p-10">
-      <!-- Hàng trên: Tiêu đề bên trái và nút quay về bên phải -->
-      <div class="flex items-center justify-between mb-4">
+    <main class="flex-1 p-4 md:p-10">
+      <!-- Tiêu đề & button quay về -->
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-4 gap-4">
         <h2 class="text-2xl font-bold">Tất cả bài viết</h2>
         <a href="homepage.html"
           class="text-sm text-gray-600 border border-gray-300 px-4 py-2 rounded hover:bg-gray-100 transition">
@@ -49,18 +49,24 @@
         </a>
       </div>
 
-      <!-- Hàng dưới: Nút thêm bài viết -->
+      <!-- Button thêm bài viết -->
       <div class="mb-6">
-        <button class="bg-black text-white px-4 py-2 rounded text-sm font-semibold hover:opacity-90">
+        <!-- Desktop -->
+        <button
+          class="hidden md:inline-flex bg-black text-white px-4 py-2 rounded text-sm font-semibold hover:opacity-90">
           + Thêm bài viết mới
+        </button>
+        <!-- Mobile icon -->
+        <button class="md:hidden bg-black text-white p-2 rounded-full hover:opacity-90">
+          <span class="material-icons text-base">note_add</span>
         </button>
       </div>
 
-      <!-- Thanh tìm kiếm và bộ lọc -->
-      <div class="flex items-center justify-between mb-4">
+      <!-- Tìm kiếm & lọc -->
+      <div class="flex flex-col sm:flex-row items-center justify-between mb-4 gap-2">
         <input type="text" placeholder="Tìm kiếm bài viết..."
-          class="border border-gray-300 rounded px-4 py-2 text-sm w-full max-w-sm">
-        <select class="ml-4 border border-gray-300 rounded px-3 py-2 text-sm">
+          class="border border-gray-300 rounded px-4 py-2 text-sm w-full sm:max-w-sm">
+        <select class="border border-gray-300 rounded px-3 py-2 text-sm">
           <option>Tất cả thể loại</option>
           <option>Công nghệ</option>
           <option>Kinh tế</option>
@@ -70,10 +76,10 @@
         </select>
       </div>
 
-      <!-- Bảng danh sách bài viết -->
-      <div class="bg-white border border-gray-200 rounded">
-        <table class="w-full text-sm">
-          <thead class="text-left bg-white">
+      <!-- Bảng bài viết -->
+      <div class="bg-white border border-gray-200 rounded overflow-x-auto">
+        <table class="w-full text-sm min-w-[600px]">
+          <thead class="bg-white text-left">
             <tr class="text-gray-600 border-b border-gray-200">
               <th class="py-2 px-4">Tiêu đề</th>
               <th class="py-2 px-4">Loại</th>
@@ -82,6 +88,7 @@
             </tr>
           </thead>
           <tbody>
+            <!-- Dòng mẫu -->
             <tr class="border-b border-gray-100">
               <td class="py-3 px-4 text-gray-800">Chính phủ công bố các biện pháp kinh tế mới nhằm kiểm soát lạm phát
               </td>
@@ -91,8 +98,7 @@
               <td class="py-3 px-4 text-right space-x-2">
                 <button
                   class="px-3 py-1 border border-gray-300 rounded text-sm text-gray-700 hover:bg-gray-100 transition">Sửa</button>
-                <button
-                  class="px-3 py-1 border border-red-300 text-red-600 rounded text-sm hover:bg-red-50 transition">Xoá</button>
+                <button class="px-3 py-1 border border-red-300 text-red-600 rounded text-sm hover:bg-red-50 transition">Xoá</button>
               </td>
             </tr>
             <tr class="border-b border-gray-100">
@@ -103,8 +109,7 @@
               <td class="py-3 px-4 text-right space-x-2">
                 <button
                   class="px-3 py-1 border border-gray-300 rounded text-sm text-gray-700 hover:bg-gray-100 transition">Sửa</button>
-                <button
-                  class="px-3 py-1 border border-red-300 text-red-600 rounded text-sm hover:bg-red-50 transition">Xoá</button>
+                <button class="px-3 py-1 border border-red-300 text-red-600 rounded text-sm hover:bg-red-50 transition">Xoá</button>
               </td>
             </tr>
             <tr class="border-b border-gray-100">
@@ -116,8 +121,7 @@
               <td class="py-3 px-4 text-right space-x-2">
                 <button
                   class="px-3 py-1 border border-gray-300 rounded text-sm text-gray-700 hover:bg-gray-100 transition">Sửa</button>
-                <button
-                  class="px-3 py-1 border border-red-300 text-red-600 rounded text-sm hover:bg-red-50 transition">Xoá</button>
+                <button class="px-3 py-1 border border-red-300 text-red-600 rounded text-sm hover:bg-red-50 transition">Xoá</button>
               </td>
             </tr>
             <tr class="border-b border-gray-100">
@@ -128,8 +132,7 @@
               <td class="py-3 px-4 text-right space-x-2">
                 <button
                   class="px-3 py-1 border border-gray-300 rounded text-sm text-gray-700 hover:bg-gray-100 transition">Sửa</button>
-                <button
-                  class="px-3 py-1 border border-red-300 text-red-600 rounded text-sm hover:bg-red-50 transition">Xoá</button>
+                <button class="px-3 py-1 border border-red-300 text-red-600 rounded text-sm hover:bg-red-50 transition">Xoá</button>
               </td>
             </tr>
             <tr class="border-b border-gray-100">
@@ -140,8 +143,7 @@
               <td class="py-3 px-4 text-right space-x-2">
                 <button
                   class="px-3 py-1 border border-gray-300 rounded text-sm text-gray-700 hover:bg-gray-100 transition">Sửa</button>
-                <button
-                  class="px-3 py-1 border border-red-300 text-red-600 rounded text-sm hover:bg-red-50 transition">Xoá</button>
+                <button class="px-3 py-1 border border-red-300 text-red-600 rounded text-sm hover:bg-red-50 transition">Xoá</button>
               </td>
             </tr>
             <tr class="border-b border-gray-100">
@@ -153,8 +155,7 @@
               <td class="py-3 px-4 text-right space-x-2">
                 <button
                   class="px-3 py-1 border border-gray-300 rounded text-sm text-gray-700 hover:bg-gray-100 transition">Sửa</button>
-                <button
-                  class="px-3 py-1 border border-red-300 text-red-600 rounded text-sm hover:bg-red-50 transition">Xoá</button>
+                <button class="px-3 py-1 border border-red-300 text-red-600 rounded text-sm hover:bg-red-50 transition">Xoá</button>
               </td>
             </tr>
             <tr class="border-b border-gray-100">
@@ -165,8 +166,7 @@
               <td class="py-3 px-4 text-right space-x-2">
                 <button
                   class="px-3 py-1 border border-gray-300 rounded text-sm text-gray-700 hover:bg-gray-100 transition">Sửa</button>
-                <button
-                  class="px-3 py-1 border border-red-300 text-red-600 rounded text-sm hover:bg-red-50 transition">Xoá</button>
+                <button class="px-3 py-1 border border-red-300 text-red-600 rounded text-sm hover:bg-red-50 transition">Xoá</button>
               </td>
             </tr>
             <tr class="border-b border-gray-100">
@@ -177,8 +177,7 @@
               <td class="py-3 px-4 text-right space-x-2">
                 <button
                   class="px-3 py-1 border border-gray-300 rounded text-sm text-gray-700 hover:bg-gray-100 transition">Sửa</button>
-                <button
-                  class="px-3 py-1 border border-red-300 text-red-600 rounded text-sm hover:bg-red-50 transition">Xoá</button>
+                <button class="px-3 py-1 border border-red-300 text-red-600 rounded text-sm hover:bg-red-50 transition">Xoá</button>
               </td>
             </tr>
             <tr class="border-b border-gray-100">
@@ -190,8 +189,7 @@
               <td class="py-3 px-4 text-right space-x-2">
                 <button
                   class="px-3 py-1 border border-gray-300 rounded text-sm text-gray-700 hover:bg-gray-100 transition">Sửa</button>
-                <button
-                  class="px-3 py-1 border border-red-300 text-red-600 rounded text-sm hover:bg-red-50 transition">Xoá</button>
+                <button class="px-3 py-1 border border-red-300 text-red-600 rounded text-sm hover:bg-red-50 transition">Xoá</button>
               </td>
             </tr>
             <tr class="border-b border-gray-100">
@@ -202,11 +200,10 @@
               <td class="py-3 px-4 text-right space-x-2">
                 <button
                   class="px-3 py-1 border border-gray-300 rounded text-sm text-gray-700 hover:bg-gray-100 transition">Sửa</button>
-                <button
-                  class="px-3 py-1 border border-red-300 text-red-600 rounded text-sm hover:bg-red-50 transition">Xoá</button>
+                <button class="px-3 py-1 border border-red-300 text-red-600 rounded text-sm hover:bg-red-50 transition">Xoá</button>
               </td>
             </tr>
-            <!-- Thêm nhiều dòng nếu cần -->
+            <!-- Thêm dòng khác tương tự -->
           </tbody>
         </table>
       </div>

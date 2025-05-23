@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,11 +15,12 @@
     }
   </style>
 </head>
-<body class="bg-white text-gray-800">
 
-  <div class="min-h-screen flex">
+<body class="bg-white text-gray-800">
+  <div class="min-h-screen flex flex-col md:flex-row">
+
     <!-- Sidebar -->
-    <aside class="w-64 bg-white border-r border-gray-200">
+    <aside class="w-full md:w-64 bg-white border-b md:border-b-0 md:border-r border-gray-200">
       <div class="px-6 py-4 text-xl font-bold border-b border-gray-200">Bảng điều khiển</div>
       <nav class="flex flex-col text-sm divide-y divide-gray-200">
         <a href="/Dashboard.html" class="flex items-center gap-2 px-6 py-3 hover:bg-gray-100">
@@ -33,17 +35,16 @@
         <a href="#" class="flex items-center gap-2 px-6 py-3 bg-black text-white">
           <span class="material-icons text-base">security</span> Quyền
         </a>
-        
-     
       </nav>
     </aside>
 
     <!-- Main content -->
-    <main class="flex-1 p-10">
+    <main class="flex-1 p-4 md:p-10">
       <!-- Header -->
-      <div class="flex items-center justify-between mb-8">
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-8 gap-4">
         <h1 class="text-2xl font-bold">Quản lý quyền</h1>
-        <a href="homepage.html" class="text-sm px-4 py-2 border border-gray-300 rounded hover:bg-gray-100">Quay lại trang web</a>
+        <a href="homepage.html" class="text-sm px-4 py-2 border border-gray-300 rounded hover:bg-gray-100">Quay lại
+          trang web</a>
       </div>
 
       <!-- Role cards -->
@@ -59,24 +60,27 @@
         <div class="border border-gray-200 p-4 rounded">
           <div class="flex items-center gap-2 mb-2">
             <span class="material-icons text-sm">edit</span>
-            <span class="text-xs font-semibold px-2 py-0.5 rounded border border-blue-500 text-blue-600">biên tập viên</span>
+            <span class="text-xs font-semibold px-2 py-0.5 rounded border border-blue-500 text-blue-600">biên tập
+              viên</span>
           </div>
-          <p class="text-sm text-gray-600 mb-1">Có thể tạo và quản lý nội dung nhưng không thể quản lý người dùng hoặc cài đặt hệ thống</p>
+          <p class="text-sm text-gray-600 mb-1">Có thể tạo và quản lý nội dung nhưng không thể quản lý người dùng hoặc
+            cài đặt hệ thống</p>
           <p class="text-sm text-gray-700">Số lượng quyền: <strong>4</strong></p>
         </div>
         <div class="border border-gray-200 p-4 rounded">
           <div class="flex items-center gap-2 mb-2">
             <span class="material-icons text-sm">visibility</span>
-            <span class="text-xs font-semibold px-2 py-0.5 rounded border border-gray-400 text-gray-600">người xem</span>
+            <span class="text-xs font-semibold px-2 py-0.5 rounded border border-gray-400 text-gray-600">người
+              xem</span>
           </div>
           <p class="text-sm text-gray-600 mb-1">Chỉ có thể xem số liệu thống kê và nội dung đã xuất bản</p>
           <p class="text-sm text-gray-700">Số lượng quyền: <strong>1</strong></p>
         </div>
       </div>
 
-      <!-- Table -->
+      <!-- Permission Table -->
       <div class="border border-gray-200 rounded overflow-x-auto">
-        <table class="w-full text-sm">
+        <table class="w-full text-sm min-w-[600px]">
           <thead class="bg-gray-50 text-left">
             <tr class="text-gray-600 border-b border-gray-200">
               <th class="py-3 px-4">Sự cho phép</th>
@@ -87,7 +91,6 @@
             </tr>
           </thead>
           <tbody>
-            <!-- Rows -->
             <tr class="border-b border-gray-100">
               <td class="py-3 px-4 font-medium">Tạo bài viết</td>
               <td class="py-3 px-4 text-gray-600">Khả năng tạo bài viết mới</td>
@@ -149,6 +152,5 @@
       </div>
     </main>
   </div>
-
 </body>
 </html>

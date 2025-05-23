@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" href="./assets/images/logo.png" type="image/x-icon">
   <title>Bảng điều khiển quản trị</title>
   <script src="https://cdn.tailwindcss.com"></script>
@@ -17,12 +17,13 @@
 </head>
 
 <body class="bg-white text-gray-800">
-  <div class="min-h-screen flex">
+  <div class="min-h-screen flex flex-col md:flex-row">
+
     <!-- Sidebar -->
-    <aside class="w-60 bg-white border-r border-gray-200">
+    <aside class="w-full md:w-60 bg-white border-b md:border-b-0 md:border-r border-gray-200">
       <div class="px-6 py-4 text-xl font-bold border-b border-gray-200">Bảng điều khiển</div>
       <nav class="flex flex-col text-sm divide-y divide-gray-200">
-        <a href="#" class="flex items-center gap-2 px-6 py-3 font-semibold bg-gray-900 text-white">
+        <a href="#" class="flex items-center gap-2 px-6 py-3 bg-gray-900 text-white">
           <span class="material-icons text-base">dashboard</span> Bảng điều khiển
         </a>
         <a href="/Articles Management.html" class="flex items-center gap-2 px-6 py-3 hover:bg-gray-100">
@@ -34,20 +35,20 @@
         <a href="/role.html" class="flex items-center gap-2 px-6 py-3 hover:bg-gray-100">
           <span class="material-icons text-base">security</span> Quyền
         </a>
-
       </nav>
     </aside>
 
-    <!-- Nội dung chính -->
-    <main class="flex-1 p-10">
-      <h2 class="text-2xl font-bold mb-6">Tổng quan về bảng điều khiển</h2>
-      <!-- Nút quay lại trang -->
-      <div class="flex justify-end mb-4">
-        <a href="/homepage.html" class="border px-4 py-2 rounded text-sm hover:bg-gray-100">
+    <!-- Main content -->
+    <main class="flex-1 p-4 md:p-10">
+      <!-- Header -->
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-6 gap-4">
+        <h2 class="text-2xl font-bold">Tổng quan về bảng điều khiển</h2>
+        <a href="/homepage.html" class="text-sm px-4 py-2 border border-gray-300 rounded hover:bg-gray-100">
           Quay lại trang
         </a>
       </div>
-      <!-- Thẻ thống kê -->
+
+      <!-- Stats cards -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
         <div class="bg-white border border-gray-200 p-4 rounded">
           <p class="text-gray-600 text-sm">Tổng số bài viết</p>
@@ -67,10 +68,10 @@
         </div>
       </div>
 
-      <!-- Bảng bài viết gần đây -->
-      <div class="bg-white border border-gray-200 rounded">
+      <!-- Recent articles table -->
+      <div class="bg-white border border-gray-200 rounded overflow-x-auto">
         <div class="p-4 border-b border-gray-200 font-semibold">Bài viết gần đây</div>
-        <table class="w-full text-sm">
+        <table class="w-full text-sm min-w-[500px]">
           <thead class="text-left bg-white">
             <tr class="text-gray-600 border-b border-gray-200">
               <th class="py-2 px-4">Tiêu đề</th>
@@ -79,6 +80,7 @@
             </tr>
           </thead>
           <tbody>
+            <!-- Sample row -->
             <tr class="border-b border-gray-100">
               <td class="py-3 px-4 text-gray-800">Chính phủ công bố các biện pháp kinh tế mới nhằm kiểm soát lạm phát
               </td>
@@ -142,6 +144,7 @@
               </td>
               <td class="py-3 px-4 text-gray-600">Ngày 8 tháng 5 năm 2025</td>
             </tr>
+            <!-- Additional rows -->
           </tbody>
         </table>
       </div>
