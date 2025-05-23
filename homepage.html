@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trang Báo Bảo Hòa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-900">
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-3">
+            <!-- Logo -->
+            <a href="/homepage.html" class="text-2xl font-extrabold text-gray-900 hover:text-red-600 transition">
+                Báo Bảo Hòa
+            </a>
+            <!-- Navigation -->
+            <nav class="hidden md:flex space-x-8 text-sm text-gray-700">
+                <a href="#" class="hover:text-red-600 transition">Chính trị</a>
+                <a href="#" class="hover:text-red-600 transition">Kinh tế</a>
+                <a href="#" class="hover:text-red-600 transition">Công nghệ</a>
+                <a href="#" class="hover:text-red-600 transition">Thể thao</a>
+                <a href="#" class="hover:text-red-600 transition">Văn hóa</a>
+            </nav>
+            <!-- Search -->
+            <div class="relative hidden md:block w-1/3">
+                <input type="text" placeholder="Tìm kiếm..."
+                    class="w-full py-2 pl-10 pr-4 text-sm border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-red-500 transition" />
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-5 h-5 text-gray-400 absolute left-3 top-1/2 transform -translate-y-1/2">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 1111 3a7.5 7.5 0 015.65 12.65z" />
+                </svg>
+            </div>
+            <!-- User Avatar -->
+            <div class="relative">
+                <button id="user-menu-button" class="focus:outline-none">
+                    <img src="./assets/images/acount.png" alt="User avatar"
+                        class="w-10 h-10 rounded-full border-2 border-gray-300 hover:border-red-600 transition" />
+                </button>
+                <div id="user-dropdown" class="hidden absolute right-0 mt-2 w-40 bg-white rounded-lg shadow-lg py-2">
+                    <button id="logout-btn"
+                        class="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Đăng
+                        xuất</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+    <!-- Hero Section -->
+    <section class="bg-gray-100 py-16 px-6 text-center">
+        <h2 class="text-4xl font-bold mb-4 text-gray-900">Cập nhật những tin tức mới nhất</h2>
+        <p class="text-gray-700 max-w-2xl mx-auto mb-6">
+            Phân tích chuyên sâu, phóng sự độc quyền và mọi thông tin bạn cần — cập nhật theo thời gian thực.
+        </p>
+        <div class="space-x-4">
+            <button class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">Tin nổi bật</button>
+            <button class="bg-white border px-4 py-2 rounded hover:bg-gray-200">Khám phá chuyên mục</button>
+        </div>
+    </section>
+
+    <!-- Featured Article -->
+    <section class="max-w-7xl mx-auto px-6 py-12">
+        <div
+            class="grid md:grid-cols-2 gap-10 items-center group hover:shadow-lg hover:border-red-100 border border-transparent rounded-xl transition duration-300 p-4">
+
+
+            <!-- Image -->
+            <div class="overflow-hidden rounded-xl">
+                <a href="/chinhphucongbo.html">
+                    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d" alt="Ảnh minh họa"
+                        class="rounded-xl shadow-md w-full transform transition duration-500 group-hover:scale-105" />
+                </a>
+            </div>
+
+            <!-- Text Content -->
+            <div>
+                <span class="inline-block text-xs px-2 py-1 bg-red-100 text-red-700 rounded-full">Kinh tế</span>
+                <p class="text-sm text-gray-500 mt-2">15 Tháng 5, 2025 • 5 phút đọc</p>
+
+                <!-- H3 with movement -->
+                <h3
+                    class="text-2xl font-bold text-gray-900 mt-4 transition-all duration-300 group-hover:text-red-600 group-hover:translate-x-1">
+                    <a href="/chinhphucongbo.html">
+                        Chính phủ công bố các biện pháp kinh tế mới nhằm kiểm soát lạm phát</a>
+                </h3>
+
+                <p class="text-gray-700 mt-4">
+                    Thủ tướng đã công bố một kế hoạch đầy tham vọng nhằm kiềm chế giá cả tăng cao và bảo vệ sức mua của
+                    người dân.
+                </p>
+
+                <!-- Link with movement -->
+                <a href="/chinhphucongbo.html"
+                    class="text-red-600 font-semibold inline-block mt-4 hover:underline transition-all duration-300 group-hover:translate-x-1">
+                    Xem thêm
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Tin tức mới nhất -->
+    <section class="max-w-7xl mx-auto px-6 py-12">
+        <h2 class="text-2xl font-semibold mb-6">Tin tức mới nhất</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Bài viết 1 -->
+            <div class="group">
+                <a href="/ungthu.html">
+                    <img src="https://nld.mediacdn.vn/2019/12/10/cancer-cells-have-a-transformative-impact-on-neighboring-cells-730x410-15759630981871589767434.jpg?auto=format&fit=crop&w=600&q=80&h=350"
+                        class="rounded-xl mb-4 transition-transform duration-300 group-hover:scale-105"
+                        alt="Ung thư" /></a>
+                <span class="inline-block text-xs px-2 py-1 bg-red-100 text-red-700 rounded-full">Sức khỏe</span>
+                <p class="text-sm text-gray-500 mt-1">14 Tháng 5 2025 • 4 phút đọc</p>
+                <h3 class="font-bold text-lg mt-2 transition-colors duration-300 group-hover:text-red-600">
+                    <a href="/ungthu.html">
+                        Bước đột phá công nghệ lớn trong cuộc chiến chống ung thư</a>
+                </h3>
+                <p class="text-gray-600 mt-2 text-sm">
+                    Các nhà nghiên cứu công bố phương pháp điều trị đầy hứa hẹn với kết quả chưa từng có.
+                </p>
+                <a href="/ungthu.html" class="text-red-600 font-semibold mt-2 inline-block hover:underline">Xem thêm</a>
+            </div>
+
+            <!-- Bài viết 2 -->
+            <div class="group">
+                <a href="/hoinghi.html">
+                    <img src="https://file3.qdnd.vn/data/images/0/2021/10/22/lamanh/fd40f8b51a576d0dd4c43ecc0d64d09b48854432pm.jpg?dpi=150&quality=100&w=870?auto=format&fit=crop&w=600&q=80&h=350"
+                        class="rounded-xl mb-4 transition-transform duration-300 group-hover:scale-105"
+                        alt="Khí hậu" /></a>
+                <span class="inline-block text-xs px-2 py-1 bg-green-100 text-green-700 rounded-full">Môi trường</span>
+                <p class="text-sm text-gray-500 mt-1">14 Tháng 5 2025 • 6 phút đọc</p>
+                <h3 class="font-bold text-lg mt-2 transition-colors duration-300 group-hover:text-red-600">
+                    <a href="/hoinghi.html">
+                        Hội nghị khí hậu quốc tế khai mạc tại Paris</a>
+                </h3>
+                <p class="text-gray-600 mt-2 text-sm">
+                    Hơn 180 quốc gia họp bàn các giải pháp cụ thể đối phó khẩn cấp khí hậu.
+                </p>
+                <a href="/hoinghi.html" class="text-red-600 font-semibold mt-2 inline-block hover:underline">Xem
+                    thêm</a>
+            </div>
+
+            <!-- Bài viết 3 -->
+            <div class="group">
+                <a href="/baucu.html">
+                    <img src="https://file3.qdnd.vn/data/images/0/2024/11/06/upload_2326/bau-cu-tong-thong-my-2024.jpg?auto=format&fit=crop&w=600&q=80&h=350"
+                        class="rounded-xl mb-4 transition-transform duration-300 group-hover:scale-105"
+                        alt="Bầu cử" /></a>
+                <span class="inline-block text-xs px-2 py-1 bg-pink-100 text-pink-700 rounded-full">Chính trị</span>
+                <p class="text-sm text-gray-500 mt-1">13 Tháng 5 2025 • 8 phút đọc</p>
+                <h3 class="font-bold text-lg mt-2 transition-colors duration-300 group-hover:text-red-600">
+                    <a href="/baucu.html">
+                        Bầu cử: Kết quả vòng một chi tiết</a>
+                </h3>
+                <p class="text-gray-600 mt-2 text-sm">
+                    Phân tích xu hướng và bất ngờ từ cuộc bỏ phiếu trên toàn quốc vào Chủ nhật.
+                </p>
+                <a href="/baucu.html" class="text-red-600 font-semibold mt-2 inline-block hover:underline">Xem thêm</a>
+            </div>
+
+            <!-- Bài viết 4 -->
+            <div class="group">
+                <a href="/tritue.html">
+                    <img src="https://vinuni.edu.vn/wp-content/uploads/2024/12/tri-tue-nhan-tao-trong-doi-song-cuoc-cach-mang-thay-doi-moi-mat-xa-hoi-hinh-2.jpg?auto=format&fit=crop&w=600&q=80&h=350"
+                        class="rounded-xl mb-4 transition-transform duration-300 group-hover:scale-105"
+                        alt="Bầu cử" /></a>
+                <span class="inline-block text-xs px-2 py-1 bg-blue-100 text-blue-700 rounded-full">Công nghệ</span>
+                <p class="text-sm text-gray-500 mt-1">13 Tháng 5 2025 • 8 phút đọc</p>
+                <h3 class="font-bold text-lg mt-2 transition-colors duration-300 group-hover:text-red-600">
+                    <a href="/tritue.html">
+                        Trí tuệ nhân tạo đang cách mạng hóa thế giới công việc</a>
+                </h3>
+                <p class="text-gray-600 mt-2 text-sm">
+                    Các công ty đang thích ứng như thế nào với quá trình chuyển đổi số lớn này và tác động của nó đối
+                    với nhân
+                    viên.
+                </p>
+                <a href="/tritue.html" class="text-red-600 font-semibold mt-2 inline-block hover:underline">Xem thêm</a>
+            </div>
+            <!-- Bài viết 5 -->
+            <div class="group">
+                <a href="/mu.html">
+                    <img src="https://cdn-img.thethao247.vn/storage/files/member-storage/2025/05/09/mu-vs-tot-681d513f7608c.jpg?auto=format&fit=crop&w=600&q=80&h=350"
+                        class="rounded-xl mb-4 transition-transform duration-300 group-hover:scale-105"
+                        alt="Bầu cử" /></a>
+                <span class="inline-block text-xs px-2 py-1 bg-green-100 text-green-700 rounded-full">Thể thao</span>
+                <p class="text-sm text-gray-500 mt-1">13 Tháng 5 2025 • 8 phút đọc</p>
+                <h3 class="font-bold text-lg mt-2 transition-colors duration-300 group-hover:text-red-600">
+                    <a href="/mu.html">
+                        Trận chung kết cúp C2 sẽ diễn ra vào 2 giờ sáng ngày 22/5/2025 này</a>
+                </h3>
+                <p class="text-gray-600 mt-2 text-sm">
+                    Cả hai đội vào chung kết đều đang chuẩn bị tích cực cho trận đấu quyết định rất được mong đợi này.
+                </p>
+                <a href="/mu.html" class="text-red-600 font-semibold mt-2 inline-block hover:underline">Xem thêm</a>
+            </div>
+            <!-- Bài viết 6 -->
+            <div class="group">
+                <a href="/lienhoan.html">
+                    <img src="./assets/images/Liên hoan phim danh sách những người chiến thắng của kỳ này.jpg"
+                        class="rounded-xl mb-4 transition-transform duration-300 group-hover:scale-105"
+                        alt="Bầu cử" /></a>
+                <span class="inline-block text-xs px-2 py-1 bg-yellow-100 text-yellow-700 rounded-full">Văn hóa</span>
+                <p class="text-sm text-gray-500 mt-1">13 Tháng 5 2025 • 8 phút đọc</p>
+                <h3 class="font-bold text-lg mt-2 transition-colors duration-300 group-hover:text-red-600">
+                    <a href="/lienhoan.html">
+                        Liên hoan phim: danh sách những người chiến thắng của kỳ này</a>
+                </h3>
+                <p class="text-gray-600 mt-2 text-sm">
+                    Khám phá những bộ phim đoạt giải thưởng và những điểm nổi bật trong tuần dành riêng cho môn nghệ
+                    thuật thứ 7.
+                </p>
+                <a href="/lienhoan.html" class="text-red-600 font-semibold mt-2 inline-block hover:underline">Xem
+                    thêm</a>
+            </div>
+        </div>
+    </section>
+    <!-- Thể loại -->
+    <section class="max-w-7xl mx-auto px-6 py-12">
+        <h2 class="text-2xl font-bold mb-6">Thể loại</h2>
+        <hr class="border-gray-300 mb-8" />
+
+        <div class="grid md:grid-cols-3 gap-6">
+            <!-- Chính sách -->
+            <a href="#" class="relative rounded-lg overflow-hidden group">
+                <img src="https://images.unsplash.com/photo-1555374018-13a8994ab246?auto=format&fit=crop&w=800&q=80"
+                    class="w-full h-44 object-cover group-hover:scale-105 transition duration-300" alt="Chính sách" />
+                <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-end p-4 text-white">
+                    <h3 class="text-lg font-bold">Chính sách</h3>
+                    <p class="text-sm">Theo dõi tin tức chính trị trong nước và quốc tế</p>
+                </div>
+            </a>
+
+            <!-- Kinh tế -->
+            <a href="#" class="relative rounded-lg overflow-hidden group">
+                <img src="https://vinuni.edu.vn/wp-content/uploads/2024/12/phan-biet-tang-truong-kinh-te-va-phat-trien-kinh-te-1.jpg?auto=format&fit=crop&w=800&q=80"
+                    class="w-full h-44 object-cover group-hover:scale-105 transition duration-300" alt="Kinh tế" />
+                <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-end p-4 text-white">
+                    <h3 class="text-lg font-bold">Kinh tế</h3>
+                    <p class="text-sm">Tin tức kinh tế, tài chính và thị trường</p>
+                </div>
+            </a>
+
+            <!-- Công nghệ -->
+            <a href="#" class="relative rounded-lg overflow-hidden group">
+                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80"
+                    class="w-full h-44 object-cover group-hover:scale-105 transition duration-300" alt="Công nghệ" />
+                <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-end p-4 text-white">
+                    <h3 class="text-lg font-bold">Công nghệ</h3>
+                    <p class="text-sm">Đổi mới, khởi nghiệp và xu hướng số</p>
+                </div>
+            </a>
+
+            <!-- Thể thao -->
+            <a href="#" class="relative rounded-lg overflow-hidden group">
+                <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=800&q=80"
+                    class="w-full h-44 object-cover group-hover:scale-105 transition duration-300" alt="Thể thao" />
+                <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-end p-4 text-white">
+                    <h3 class="text-lg font-bold">Thể thao</h3>
+                    <p class="text-sm">Kết quả và phân tích thể thao mới nhất</p>
+                </div>
+            </a>
+
+            <!-- Văn hoá -->
+            <a href="#" class="relative rounded-lg overflow-hidden group">
+                <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=800&q=80"
+                    class="w-full h-44 object-cover group-hover:scale-105 transition duration-300" alt="Văn hoá" />
+                <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-end p-4 text-white">
+                    <h3 class="text-lg font-bold">Văn hoá</h3>
+                    <p class="text-sm">Nghệ thuật, điện ảnh, âm nhạc và văn học</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Tin tức tiếp theo -->
+    <!-- Tin tức mới nhất -->
+    <section class="max-w-7xl mx-auto px-6 py-12">
+        <h2 class="text-2xl font-semibold mb-6">Bài viết phổ biến</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+
+            <!-- Bài viết 4 -->
+            <div class="group">
+                <a href="/thitruong.html">
+                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=600&q=80&h=400"
+                        class="rounded-xl mb-4 transition-transform duration-300 group-hover:scale-105"
+                        alt="Bất động sản" /></a>
+                <span class="inline-block text-xs px-2 py-1 bg-red-100 text-red-700 rounded-full ">Kinh tế</span>
+                <p class="text-sm text-gray-500 mt-1">10 Tháng 5 2025 • 6 phút đọc</p>
+                <h3 class="font-bold text-lg mt-2 transition-colors duration-300 group-hover:text-red-600">
+                    <a href="/thitruong.html">
+                        Thị trường bất động sản chứng kiến sự chững lại lịch sử</a>
+                </h3>
+                <p class="text-gray-600 mt-2 text-sm">
+                    Phân tích nguyên nhân và hậu quả từ sự sụt giảm giao dịch bất động sản.
+                </p>
+                <a href="/thitruong.html" class="text-red-600 font-semibold mt-2 inline-block hover:underline">Xem
+                    thêm</a>
+            </div>
+
+            <!-- Bài viết 5 -->
+            <div class="group">
+                <a href="/phathien.html">
+                    <img src="https://images.unsplash.com/photo-1604537529428-15bcbeecfe4d?auto=format&fit=crop&w=600&q=80&h=400"
+                        class="rounded-xl mb-4 transition-transform duration-300 group-hover:scale-105"
+                        alt="Amazon" /></a>
+                <span class="inline-block text-xs px-2 py-1 bg-purple-100 text-purple-700 rounded-full">Khoa học</span>
+                <p class="text-sm text-gray-500 mt-1">9 Tháng 5 2025 • 4 phút đọc</p>
+                <h3 class="font-bold text-lg mt-2 transition-colors duration-300 group-hover:text-red-600">
+                    <a href="/phathien.html">
+                        Phát hiện loài động vật có vú mới tại rừng Amazon</a>
+                </h3>
+                <p class="text-gray-600 mt-2 text-sm">
+                    Các nhà khoa học ca ngợi phát hiện làm thay đổi nhiều giả thuyết hiện tại.
+                </p>
+                <a href="/phathien.html" class="text-red-600 font-semibold mt-2 inline-block hover:underline">Xem
+                    thêm</a>
+            </div>
+
+            <!-- Bài viết 6 -->
+            <div class="group">
+                <a href="/caicach.html">
+                    <img src="https://cdn2.tuoitre.vn/471584752817336320/2024/5/3/ttctso165-5p10-17147044051331946278437.jpg?auto=format&fit=crop&w=600&q=80&h=400"
+                        class="rounded-xl mb-4 transition-transform duration-300 group-hover:scale-105"
+                        alt="Giáo dục" /></a>
+                <span class="inline-block text-xs px-2 py-1 bg-pink-100 text-pink-700 rounded-full">Chính trị</span>
+                <p class="text-sm text-gray-500 mt-1">8 Tháng 5 2025 • 7 phút đọc</p>
+                <h3 class="font-bold text-lg mt-2 transition-colors duration-300 group-hover:text-red-600">
+                    <a href="/caicach.html">
+                        Cải cách giáo dục được thông qua bất chấp biểu tình</a>
+                </h3>
+                <p class="text-gray-600 mt-2 text-sm">
+                    Văn bản gây tranh cãi được phê duyệt tối qua sau nhiều tháng tranh luận sôi nổi.
+                </p>
+                <a href="/caicach.html" class="text-red-600 font-semibold mt-2 inline-block hover:underline">Xem
+                    thêm</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 py-12 mt-10">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-8">
+            <!-- Cột 1 -->
+            <div>
+                <h3 class="text-xl font-semibold mb-4">BaoBaoHoa</h3>
+                <p class="text-sm text-gray-600 mb-4">
+                    Nguồn tin đáng tin cậy để theo dõi thời sự trong nước và quốc tế.
+                </p>
+                <div class="flex space-x-4 text-sm text-gray-500">
+                    <a href="#">Facebook</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">Instagram</a>
+                </div>
+            </div>
+
+            <!-- Cột 2 -->
+            <div>
+                <h4 class="font-semibold text-lg mb-3">Danh mục</h4>
+                <ul class="text-sm text-gray-600 space-y-2">
+                    <li><a href="#">Chính trị</a></li>
+                    <li><a href="#">Kinh tế</a></li>
+                    <li><a href="#">Công nghệ</a></li>
+                    <li><a href="#">Thể thao</a></li>
+                    <li><a href="#">Văn hóa</a></li>
+                </ul>
+            </div>
+
+            <!-- Cột 3 -->
+            <div>
+                <h4 class="font-semibold text-lg mb-3">Liên kết</h4>
+                <ul class="text-sm text-gray-600 space-y-2">
+                    <li><a href="#">Giới thiệu</a></li>
+                    <li><a href="#">Liên hệ</a></li>
+                    <li><a href="#">Chính sách bảo mật</a></li>
+                    <li><a href="#">Điều khoản sử dụng</a></li>
+                </ul>
+            </div>
+
+            <!-- Cột 4 -->
+            <div>
+                <h4 class="font-semibold text-lg mb-3">Đăng ký nhận tin</h4>
+                <p class="text-sm text-gray-600 mb-4">
+                    Nhập email để nhận tin tức mới nhất từ chúng tôi.
+                </p>
+                <form class="flex">
+                    <input type="email" placeholder="Email của bạn"
+                        class="flex-1 px-4 py-2 rounded-l-md border border-gray-300 focus:outline-none" />
+                    <button class="bg-red-700 text-white px-4 rounded-r-md">Gửi</button>
+                </form>
+            </div>
+        </div>
+        <div class="text-center text-sm text-gray-500 mt-10 border-t pt-4">
+            © 2025 Cổng Tin Tức. Bản quyền thuộc về nhóm phát triển.
+        </div>
+    </footer>
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const userBtn = document.getElementById('user-menu-button');
+            const dropdown = document.getElementById('user-dropdown');
+            const logoutBtn = document.getElementById('logout-btn');
+
+            // Toggle dropdown
+            userBtn.addEventListener('click', () => {
+                dropdown.classList.toggle('hidden');
+            });
+
+            // Logout
+            logoutBtn.addEventListener('click', () => {
+                window.location.href = '/index.html';
+            });
+
+            // Click ngoài đóng dropdown
+            document.addEventListener('click', (e) => {
+                if (!userBtn.contains(e.target) && !dropdown.contains(e.target)) {
+                    dropdown.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

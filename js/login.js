@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Sau 2.5s thì chuyển hướng sang trang chính (ví dụ: trang chủ)
     setTimeout(() => {
       alertBox.classList.remove('show');
-      window.location.href = 'index.html'; // đổi thành đường dẫn cần thiết
+      window.location.href = 'homepage.html'; // đổi thành đường dẫn cần thiết
     }, 2500);
   });
 });
